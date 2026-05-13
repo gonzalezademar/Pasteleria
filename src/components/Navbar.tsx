@@ -76,9 +76,13 @@ export default function Navbar() {
 
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         {!session ? (
-          <Link href="/auth" onClick={() => setIsMenuOpen(false)} className="btn btn-primary" style={{ textDecoration: 'none' }}>Ingresar / Registrarme</Link>
+          <>
+            <Link href="/#features" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '0.95rem', marginRight: '20px' }}>Características</Link>
+            <Link href="/auth" onClick={() => setIsMenuOpen(false)} className="btn btn-primary" style={{ textDecoration: 'none' }}>Vender mi Pastelería</Link>
+          </>
         ) : (
           <>
+            <Link href="/tienda/demo" onClick={() => setIsMenuOpen(false)} style={{ color: 'var(--text-main)', textDecoration: 'none', fontSize: '0.95rem', marginRight: '20px' }}>Mi Tienda</Link>
             {/* Toggle de Modo (Cliente / Admin) */}
             <div className={`role-toggle ${displayRole === 'admin' ? 'admin' : ''}`}>
               <div className="role-toggle-slider"></div>
@@ -89,10 +93,10 @@ export default function Navbar() {
                   setSimulatedRole('client');
                   localStorage.setItem('simulatedRole', 'client');
                   setIsMenuOpen(false);
-                  router.push('/');
+                  router.push('/tienda/demo');
                 }}
               >
-                🛒 Cliente
+                🛒 Vista
               </button>
               <button 
                 type="button"

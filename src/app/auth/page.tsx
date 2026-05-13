@@ -61,11 +61,11 @@ export default function Auth() {
         
         <div style={{ textAlign: 'center', marginBottom: '10px' }}>
           <h1 className="neon-text-pink" style={{ fontSize: '2rem', marginBottom: '8px' }}>
-            {mode === 'login' ? 'Iniciar Sesión' : mode === 'register' ? 'Crear Cuenta' : 'Recuperar Clave'}
+            {mode === 'login' ? 'Iniciar Sesión' : mode === 'register' ? 'Vende Online' : 'Recuperar Clave'}
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-            {mode === 'login' ? 'Accede a tus reservas y chat con la pastelería.' : 
-             mode === 'register' ? 'Únete para hacer tus reservas 3D personalizadas.' :
+            {mode === 'login' ? 'Accede a tu panel de pastelería y gestiona tus productos.' : 
+             mode === 'register' ? 'Crea tu tienda online profesional en menos de 5 minutos.' :
              'Te enviaremos un link de recuperación al email.'}
           </p>
         </div>
